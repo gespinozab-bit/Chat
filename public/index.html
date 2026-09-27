@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generación progresiva con SSE</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Proyecto universitario · Sprint 4 final</p>
+      <h1>Generación progresiva con SSE</h1>
+      <p>Escribe un mensaje y observa la respuesta de OpenAI conforme se genera.</p>
+      <form id="generation-form">
+        <label for="message">Tu mensaje</label>
+        <textarea id="message" name="message" rows="6" maxlength="2000" required placeholder="Escribe tu mensaje aquí…" aria-describedby="message-help"></textarea>
+        <small id="message-help">Máximo 2000 caracteres.</small>
+        <div class="actions">
+          <button id="generate" type="submit">Generar</button>
+          <button id="stop" type="button" disabled>Detener</button>
+        </div>
+      </form>
+      <p id="status" role="status" data-state="ready">Listo</p>
+      <section aria-labelledby="response-heading">
+        <h2 id="response-heading">Respuesta</h2>
+        <div id="response" aria-live="polite">Aquí aparecerá la respuesta.</div>
+      </section>
+      <p class="states">Estados: Esperando · Generando · Completado · Interrumpido. Puedes detener la generación y conservar el texto recibido.</p>
+    </main>
+  </body>
+</html>
